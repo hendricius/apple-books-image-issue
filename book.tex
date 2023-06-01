@@ -1,0 +1,41 @@
+\documentclass[a4paper, 12pt]{book}
+
+% General packages
+\usepackage{tex4ebook}
+
+% Does not work
+\graphicspath{
+  {./images/}
+}
+
+% Works
+% \graphicspath{
+%   {images/}
+% }
+
+\begin{document}
+
+% Title page
+\begin{titlepage}
+	\centering
+  Version:
+  \today
+\end{titlepage}
+
+\begin{figure}
+  \includegraphics[width=\textwidth]{bread.jpg}
+  \caption{Working}
+\end{figure}
+
+\begin{figure}
+  \includegraphics[width=\textwidth]{bread-2.jpg}
+  \caption{Not working. Shows as ? in Apple books}
+\end{figure}
+
+\begin{figure}
+  \includegraphics{figures/fig-test-figure.pdf}
+  \caption{Properly shows}
+\end{figure}
+
+
+\end{document}
